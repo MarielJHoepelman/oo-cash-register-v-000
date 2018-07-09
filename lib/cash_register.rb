@@ -9,8 +9,8 @@ class CashRegister
 
   def add_item(item, price, quantity = 1)
     quantity.times { @items << item }
-    self.subtotal = price * quantity
-    self.total += subtotal
+    self.previous_total = price * quantity
+    self.total += previous_total
   end
 
   def apply_discount
@@ -23,6 +23,6 @@ class CashRegister
   end
 
   def void_last_transaction
-    self.total -= subtotal
+    self.total -= previous_total
   end
 end
