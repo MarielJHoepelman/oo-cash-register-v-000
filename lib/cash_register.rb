@@ -15,8 +15,9 @@ class CashRegister
     if discount.zero?
       "There is no discount to apply."
     else
-      "After the discount, the total comes to $800."
-    end 
+      
+      "After the discount, the total comes to #{total}."
+    end
   end
 
 end
