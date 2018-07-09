@@ -17,7 +17,7 @@ class CashRegister
     else
       value_discount = total * (discount.to_f/100)
       self.total = total - value_discount
-      "After the discount, the total comes to #{total}."
+      "After the discount, the total comes to $#{total.to_i}."
     end
   end
 
