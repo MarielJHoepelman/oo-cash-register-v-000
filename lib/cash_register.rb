@@ -11,4 +11,12 @@ class CashRegister
     self.total = total + subtotal
   end
 
+  def apply_discount
+    if discount.zero?
+      "There is no discount to apply."
+    else
+      "After the discount, the total comes to $800."
+    end 
+  end
+
 end
