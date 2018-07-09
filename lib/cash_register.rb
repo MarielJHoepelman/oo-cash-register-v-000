@@ -1,5 +1,5 @@
 class CashRegister
-  attr_accessor :total, :discount
+  attr_accessor :total, :discount, :subtotal
 
   def initialize(discount = 0)
     @total = 0
@@ -7,7 +7,8 @@ class CashRegister
   end
 
   def add_item(item, price, quantity = 1)
-    self.total = price * quantity
+    self.subtotal = price * quantity
+    self.total = total + subtotal
   end
 
 end
